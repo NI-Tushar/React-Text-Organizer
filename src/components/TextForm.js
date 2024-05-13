@@ -12,17 +12,11 @@ export default function TextForm(props) {
         let newText = text.toLowerCase();
         setText(newText);
     }
-    const toCapital = ()=>{
-        
-        const words = text.split(" ");
-
-        for (let i = 0; i < words.length; i++) {
-            words[i] = words[i][0].toUpperCase() + words[i].substr(1);
-        }
-
-        let newText = words.join(" ");
+    const clearText = ()=>{
+        let newText = '';
         setText(newText);
     }
+
 
     const textChange=(event)=>{
         console.log('text change');
@@ -41,10 +35,22 @@ export default function TextForm(props) {
             <div className="buttons">
                 <button onClick={toUppercase}>UpperCase</button>
                 <button onClick={toLowercase}>LowerCase</button>
-                <button onClick={toCapital}>Capitalize</button>
+                <button onClick={clearText}>Clear Text</button>
             </div>
+        </div>
+        {/* ____________________ */}
+        <div className="text_main_box">
+          <h3>Your Text Summary:</h3>
+          <p><span>Total Words: </span>{text.split(" ").length}</p>
+          <p><span>Total Charecters: </span>{text.length}</p>
+          <p><span>Read: </span>{0.008*text.split(" ").length} Minutes Read</p>
+          <h4>Preview:</h4>
+          <p>{text}</p>
         </div>
       </div>
     </div>
   )
 }
+
+
+
