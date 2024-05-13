@@ -1,0 +1,46 @@
+.text_box{
+    padding-top: 100px;
+    width: 100%;
+}
+.text_main_box{
+    /* background-color: rgb(252, 252, 252); */
+    box-shadow: rgba(0, 0, 0, 0.39) 0px 1px 4px;
+    max-width: 70%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+.text_main_box h2, .text_main_box h3{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.text_main_box h2{
+    border-bottom: 2px solid var(--skin-color);
+    width: fit-content;
+}
+.text_main_box textarea
+{
+    padding: 5px;
+    font-size: 20px;
+    width: 100%;
+}
+
+
+.text_main_box .buttons button{
+    background-color: var(--skin-color);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: var(--white-color);
+    margin-right: 5px;
+}
+.text_main_box .buttons button:hover{
+    background-color: var(--text-heighlight);
+    box-shadow: rgb(27, 122, 247) 0px 5px 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .text_main_box{
+        max-width: 100%;
+    }
+  }
